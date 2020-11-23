@@ -13,7 +13,8 @@ refs_value=`git symbolic-ref HEAD`
 echo "REF is $refs_value"
 /var/lib/codeql-utilities/codeql-runner-linux init --repository rohitdemo/codeql-testing --github-url https://github.com --github-auth $GITHUB_CREDS_PSW --codeql-path /var/lib/codeql-utilities/bundle/codeql/codeql
 echo "[INIT] Done"
-/var/lib/codeql-utilities/codeql-runner-linux analyze --repository rohitdemo/codeql-testing --github-url https://github.com --github-auth $GITHUB_CREDS_PSW --commit $commit_id --ref $refs_value '''
+/var/lib/codeql-utilities/codeql-runner-linux analyze --repository rohitdemo/codeql-testing --github-url https://github.com --github-auth $GITHUB_CREDS_PSW --commit $commit_id --ref $refs_value 
+echo "[ANALYZE] Done"'''
       }
     }
 
